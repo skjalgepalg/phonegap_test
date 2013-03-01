@@ -1,0 +1,197 @@
+
+@media screen and (max-width: 1024px) {
+  
+  	.component_peerGroupBenchmark {
+		.c6, .c8 {
+			display: none;
+		} 
+	}
+
+}
+
+@media screen and (max-width: 900px) {
+  
+  	.component_profitCalculator {
+		form #calculatedResult {
+			clear: left;
+		}
+	}
+
+}
+
+
+@media screen and (max-width: 800px) {
+  
+  	.component_peerGroupBenchmark {
+		.c3 {
+			display: none;
+		} 
+	}
+
+}
+
+@media screen and (max-width: 768px) { 
+  
+  	.component_peerGroupBenchmark {
+		.c5 {
+			display: none;
+		}
+		.c1 {
+			max-width: 100px;
+		} 
+	}
+	
+}
+
+
+@media screen and (max-width: 640px) { 
+
+	.component_profitCalculator {
+		#calculatedResult label.dividends {
+			clear: left;
+		}
+	}
+}
+	
+@media screen and (max-width: 568px) {
+  
+  	.modal {
+	  	margin-left: 0;
+	  	left: 10%;
+	  	width: 80%;
+  	} 
+  	
+	.row-fluid [class*="span"] {
+		float: none;
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	.component_graphInteractive {
+		.plot {
+	        height: 240px;
+	    }
+	}
+  
+	.component_peerGroupBenchmark {
+		.c4 {
+			display: none;
+		} 
+	}
+	
+	.component_snapshot {
+		#snapshot1_component_list {
+			clear: left;
+			width: auto;
+			margin-left: 0;
+		}
+		#snapshot1_component_tables {
+			width: auto;
+			float: none;
+		}
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+  	
+  	.component_graphInteractive {
+		.nav {
+			position: static;
+			margin-bottom: 0;
+			.wrapper-body:nth-child(1) {
+				left: 0;
+				right: auto;
+			}
+		} 
+	}
+  
+	.component_brokerStats {
+		.tab-content {
+			.table_table {
+				float: none;
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
+	
+}
+
+
+@media screen and (max-width: 360px) {
+	
+	.component_graphInteractive {
+		.nav,
+		.toggle-bar {
+			display: none;
+		} 
+	}
+
+	.component_profitCalculator {
+		.control-group:nth-child(3) {
+			clear: left;
+			margin: 5px 0;
+		}
+		#calculatedResult {
+			.return,
+			.last_dividends {
+				clear: left;
+			}
+		}
+	}
+	
+	// doesnt work because of too long placeholder text
+	
+	/*
+.component_profitCalculator {
+		form .control-group .input-normal {
+			width: 50px;
+		}
+	}
+*/
+	
+	
+}
+
+
+
+@media screen and (max-width: 320px) {
+  
+  	.component_brokerStats {
+		.tab-header {
+			position: static;
+		}
+		td.c0 {
+			max-width: 100px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			text-overflow: -o-text-overflow;
+		}
+	}
+	
+	.component_companyInfo {
+		.component-content {
+			.table_table {
+				float: none;
+				width: 100%;
+				margin-left: 0;
+				&:last-child {
+					tr.f {
+						th, td {
+							border-top: 1px solid @tableBorder;
+						}
+					}
+				}
+			}
+		}
+	}
+		
+  	.component_peerGroupBenchmark {
+		.c10 {
+			display: none;
+		} 
+	}
+
+}

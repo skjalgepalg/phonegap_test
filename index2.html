@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="no">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>swipe.js playground</title>
+	    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	    <link href="css/responsive.css" rel="stylesheet" media="screen">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+	</head>
+	<body>
+		<div class="app">
+		<div id="slider_controller">
+			<ul class="nav nav-tabs">
+				<li>
+					<a href="#" id="prev" onclick="slider.prev();return false;">
+						<em>prev</em>
+					</a>
+				</li>
+				<li>
+					<a href="#" id="next" onclick="slider.next();return false;">
+						<em>next</em>
+					</a>
+				</li>
+			</ul>	
+		</div>
+		<div id="gallery" style="background-color: rgb(196, 196, 201);">
+			<div id='slider'>
+				<ul>
+					<li id="0" style='display:block'>
+						<div class="accordion" id="accordion1">
+			                <div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#acc1CollapseOne">
+										Collapsible Group Item #1
+									</a>
+								</div>
+								<div id="acc1CollapseOne" class="accordion-body collapse in">
+									<div class="accordion-inner">
+										<img src="http://i.imgur.com/CVOku.gif"/>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#acc1CollapseTwo">
+										Collapsible Group Item #2
+									</a>
+								</div>
+								<div id="acc1CollapseTwo" class="accordion-body collapse">
+									<div class="accordion-inner">
+										<img src="http://i.imgur.com/CVOku.gif"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" id="accordion2">
+			                <div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#acc2CollapseOne">
+										Collapsible Group Item #1
+									</a>
+								</div>
+								<div id="acc2CollapseOne" class="accordion-body collapse in">
+									<div class="accordion-inner">
+										<img src="http://i.imgur.com/CVOku.gif"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" id="accordion3">
+			                <div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#acc3CollapseOne">
+										Collapsible Group Item #1
+									</a>
+								</div>
+								<div id="acc3CollapseOne" class="accordion-body collapse in">
+									<div class="accordion-inner">
+										<img src="http://i.imgur.com/CVOku.gif"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li id="1" style='display:none'>
+						<div class="accordion" id="accordion5">
+			                <div class="accordion-group">
+			                  <div class="accordion-heading">
+			                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion5" href="#collapseOne">
+			                      Collapsible Group Item #1
+			                    </a>
+			                  </div>
+			                  <div id="collapseOne" class="accordion-body collapse in">
+			                    <div class="accordion-inner">
+			                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+			                    </div>
+			                  </div>
+			                </div>
+			                <div class="accordion-group">
+			                  <div class="accordion-heading">
+			                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion5" href="#collapseTwo">
+			                      Collapsible Group Item #2
+			                    </a>
+			                  </div>
+			                  <div id="collapseTwo" class="accordion-body collapse">
+			                    <div class="accordion-inner">
+			                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+			                    </div>
+			                  </div>
+			                </div>
+			                <div class="accordion-group">
+			                  <div class="accordion-heading">
+			                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion5" href="#collapseThree">
+			                      Collapsible Group Item #3
+			                    </a>
+			                  </div>
+			                  <div id="collapseThree" class="accordion-body collapse">
+			                    <div class="accordion-inner">
+			                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+			                    </div>
+			                  </div>
+			                </div>
+			              </div>
+						<div id="peerGroupBenchmark1_component_body">
+							<table>
+								<thead>
+									<tr class="r0 f l">
+										<th class="c0 f hidden" style="display: none;">Gruppnamn</th>
+										<th class="c1 o">Namn</th>
+										<th class="c2 n">Stängning</th>
+										<th class="c3 o n">% 1 vecka</th>
+										<th class="c4 n">% 1 mån</th>
+										<th class="c5 o n">% 3 mån</th>
+										<th class="c6 n">% 6 mån</th>
+										<th class="c7 o n">% 1 år</th>
+										<th class="c8 n">% 2 år</th>
+										<th class="c9 o n">% 2 år</th>
+										<th class="c10 l n">% 5 år</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="r0 f">
+										<td class="c0 f hidden" style="display: none;">-1</td>
+										<td class="c1 o">Norsk Hydro</td>
+										<td class="c2 n">26,80</td>
+										<td class="c3 o n">
+											<span class="pos">0,07%</span>
+										</td>
+										<td class="c4 n">
+											<span class="pos">2,41%</span>
+										</td>
+										<td class="c5 o n">
+											<span class="neg">-10,67%</span>
+										</td>
+										<td class="c6 n">
+											<span class="pos">3,43%</span>
+										</td>
+										<td class="c7 o n">
+											<span class="neg">-12,62%</span>
+										</td>
+										<td class="c8 n">
+											<span class="neg">-37,22%</span>
+										</td>
+										<td class="c9 o n">
+											<span class="neg">-24,93%</span>
+										</td>
+										<td class="c10 l n">
+											<span class="neg">-50,24%</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--<img src="http://i.imgur.com/TuaMs.gif"/>-->
+					</li>
+					<li id="2" style='display:none'>
+						<div class="accordion" id="accordion3">
+			                <div class="accordion-group">
+								<img style="margin:auto 0;" src="http://i.imgur.com/wGDi8.gif"/>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="log" style="background-color: rgb(196, 196, 0);">
+			<label>TheLog:</label>
+
+		</div>
+	</div>
+		
+	    <script src="http://code.jquery.com/jquery-latest.js"></script>
+	    <script src="bootstrap/js/bootstrap.min.js"></script>
+	    <script src="js/swipe.js"></script>
+	    <script src="js/stst2.js"></script>
+	    <script type="text/javascript">
+            app.initialize();
+        </script>
+	</body>
+</html>
