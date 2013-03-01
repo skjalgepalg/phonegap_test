@@ -32,11 +32,57 @@ var app = {
         // Report the event in the console
         console.log("Report: " + id);
 
-        // Toggle the state from "pending" to "complete" for the reported ID.
-        // Accomplished by adding .hide to the pending element and removing
-        // .hide from the complete element.
-        document.querySelector('#' + id + ' .pending').className += ' hide';
-        var completeElem = document.querySelector('#' + id + ' .complete');
-        completeElem.className = completeElem.className.split('hide').join('');
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
     }
 };
+
+    var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value 
+
+    function onPhotoDataSuccess(imageData) {
+
+      var smallImage = document.getElementById('smallImage');
+
+      smallImage.style.display = 'block';
+
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    function onPhotoURISuccess(imageURI) {
+
+      var largeImage = document.getElementById('largeImage');
+
+      largeImage.style.display = 'block';
+
+      largeImage.src = imageURI;
+    }
+
+
+    function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+        destinationType: destinationType.DATA_URL });
+    }
+
+
+    function capturePhotoEdit() {
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    // 
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
